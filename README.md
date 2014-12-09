@@ -1,0 +1,1 @@
+## 汎用的なAndroid Widget
