@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/takuya/Development/GeneralWidget/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
+        <dex dex="/home/takuya/Development/GeneralWidget/app/build/intermediates/pre-dexed/debug/classes-2add68b291761033dbca3c85d908d10afc007169.jar" />
+    </item>
+    <item
+        jar="/home/takuya/Development/GeneralWidget/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="/home/takuya/Development/GeneralWidget/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-5709f1f860ace45cb0ffcac125e7dc96c7faa8ea.jar" />
+    </item>
+    <item
+        jar="/home/takuya/Development/GeneralWidget/app/build/intermediates/exploded-aar/GeneralWidget.modules/volley/unspecified/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="ea9a3bfddd6697b0998c6b8975fe89eadcd5e79c">
+        <dex dex="/home/takuya/Development/GeneralWidget/app/build/intermediates/pre-dexed/debug/classes-d7e60457332ebfa7862b5eac4835da9e7966ca86.jar" />
+    </item>
+    <item
+        jar="/home/takuya/Development/GeneralWidget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef">
+        <dex dex="/home/takuya/Development/GeneralWidget/app/build/intermediates/pre-dexed/debug/classes-b1888913f3eb51527571554d7ed0316a592c7cac.jar" />
+    </item>
+    <item
+        jar="/home/takuya/Development/GeneralWidget/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
+        <dex dex="/home/takuya/Development/GeneralWidget/app/build/intermediates/pre-dexed/debug/classes-8f00a2b3ac462db9465df876be6464b599d6a397.jar" />
+    </item>
+    <item
+        jar="/usr/local/android-studio/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="/home/takuya/Development/GeneralWidget/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-1eae1e00e5019e1eb3b961b5918cbe9fd3db8db1.jar" />
+    </item>
+
+</items>

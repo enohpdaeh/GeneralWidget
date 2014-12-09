@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5sp"
+    android:orientation="vertical" >
+   <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:paddingBottom="5dp"
+        android:textColor="#fcfcfc"
+        android:textSize="16sp"
+        android:textStyle="bold"
+       android:layout_gravity="top" />
+
+    <TextView
+        android:id="@+id/secondtext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fcfcfc"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="top" />
+
+    <TextView
+        android:id="@+id/thirdtext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fcfcfc"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="top" />
+
+    <TextView
+        android:id="@+id/forthtext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fcfcfc"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="top" />
+
+    <TextView
+        android:id="@+id/fifthtext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fcfcfc"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="top" />
+
+    <TextView
+        android:id="@+id/sixthtext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fcfcfc"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="top" />
+
+    <TextView
+        android:id="@+id/seventhtext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fcfcfc"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="top" />
+
+    <TextView
+        android:id="@+id/sisththtext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fcfcfc"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="top" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="@string/click"
+        android:layout_gravity="center_horizontal|top" />
+
+</LinearLayout>
