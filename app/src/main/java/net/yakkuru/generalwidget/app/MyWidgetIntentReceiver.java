@@ -4,7 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,23 +16,18 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
-/**
- * Created by takuya on 14/11/10.
- */
 public class MyWidgetIntentReceiver extends BroadcastReceiver {
 
-    //private final String URL_API = "http://createjson.herokuapp.com/JSON";
     private final String URL_API = "http://createjson-dev.herokuapp.com/JSON";
-    private static String sTelop;
+    private static String sNow; //日付
+    private static String sTelop;   //予報
     private static String sCity;
     private static String sDeltaTemp;
     private static String sDeltaLight;
-    private static String sNow;
     private static String sOdakyuTime;
     private static String sOdakyuStatus;
     /** HTTPリクエスト管理Queue */
     private RequestQueue mQueue;
-
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -51,7 +45,7 @@ public class MyWidgetIntentReceiver extends BroadcastReceiver {
                 Log.d("temakishiki", "response : " + response.toString());
 
                 try {
-                    JSONArray forecasts = response.getJSONArray("weather");
+                    JSONArray forecasts = response.getJSONArray("info");
                     for (int i = 0; i < forecasts.length(); i++) {
                         // 予報情報を取得
                         JSONObject forecast = forecasts.getJSONObject(i);
@@ -99,7 +93,7 @@ public class MyWidgetIntentReceiver extends BroadcastReceiver {
         if (intent.getAction().equals("UPDATE_WIDGET")) {
             RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
             //2行目
-            remoteViews.setTextViewText(R.id.title, sNow);
+            remoteViews.setTextViewText(R.id.firsttext, sNow);
             remoteViews.setTextViewText(R.id.secondtext, sTelop);
             remoteViews.setTextViewText(R.id.thirdtext, sCity);
             remoteViews.setTextViewText(R.id.forthtext, sDeltaLight);

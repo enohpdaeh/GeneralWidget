@@ -3,9 +3,11 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5sp"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:gravity="top">
+
    <TextView
-        android:id="@+id/title"
+        android:id="@+id/firsttext"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:maxLines="2"
@@ -13,7 +15,7 @@
         android:textColor="#fcfcfc"
         android:textSize="16sp"
         android:textStyle="bold"
-       android:layout_gravity="top" />
+        android:layout_gravity="top" />
 
     <TextView
         android:id="@+id/secondtext"
@@ -70,13 +72,14 @@
         android:layout_gravity="top" />
 
     <TextView
-        android:id="@+id/sisththtext"
+        android:id="@+id/eighthtext"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="#fcfcfc"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_gravity="top" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="100dp"

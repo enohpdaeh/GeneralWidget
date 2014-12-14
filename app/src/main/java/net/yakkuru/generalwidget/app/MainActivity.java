@@ -4,7 +4,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.app.Activity;
-import android.app.LauncherActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
@@ -22,7 +21,6 @@ import java.util.Iterator;
 
 public class MainActivity extends Activity {
     /** JSONデータ取得URL */
-    //private final String URL_API = "http://createjson.herokuapp.com/JSON";
     private final String URL_API = "http://createjson-dev.herokuapp.com/JSON";
 
     /** HTTPリクエスト管理Queue */
@@ -60,7 +58,7 @@ public class MainActivity extends Activity {
 
                 try {
 
-                    JSONArray forecasts = response.getJSONArray("weather");
+                    JSONArray forecasts = response.getJSONArray("info");
                     for (int i = 0; i < forecasts.length(); i++) {
                         // 予報情報を取得
                         JSONObject forecast = forecasts.getJSONObject(i);
