@@ -9,6 +9,8 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request.Method;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -26,9 +28,7 @@ public class MainActivity extends Activity {
     /** HTTPリクエスト管理Queue */
     private RequestQueue mQueue;
 
-    /** 地区名用テキストビュー */
-    TextView txtArea;
-    /** 予報表示用リストビューのアダプター */
+    /** 表示用リストビューのアダプター */
     ArrayAdapter<String> adapter;
 
     @Override
@@ -36,15 +36,18 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 地区名用のテキストビュー
-        txtArea = (TextView) findViewById(R.id.txtArea);
-        // 予報表示用のリストビュー
+        // 表示用のリストビュー
         ListView listForecast = (ListView) findViewById(R.id.listForecast);
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
         listForecast.setAdapter(adapter);
 
         // HTTPリクエスト管理Queueを生成
         mQueue = Volley.newRequestQueue(this);
+        /* タイムアウト 10000ミリ秒（10秒）*/
+        int custom_timeout_ms = 10000;
+        DefaultRetryPolicy policy = new DefaultRetryPolicy(custom_timeout_ms,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
 
         // リクエスト実行
         mQueue.add(new JsonObjectRequest(Method.GET, URL_API, null, new Listener<JSONObject>() {
@@ -82,6 +85,6 @@ public class MainActivity extends Activity {
                     Log.e("temakishiki", "エラー : " + error.networkResponse.toString());
                 }
             }
-        }));
+        })).setRetryPolicy(policy);
     }
 }
