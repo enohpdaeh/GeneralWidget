@@ -28,6 +28,7 @@ public class MyWidgetIntentReceiver extends BroadcastReceiver {
     private static String fifth;
     private static String sixth;
     private static String seventh;
+    private static String eighth;
     /** HTTPリクエスト管理Queue */
     private RequestQueue mQueue;
 
@@ -54,17 +55,14 @@ public class MyWidgetIntentReceiver extends BroadcastReceiver {
                 try {
                     JSONArray forecasts = response.getJSONArray("info");
                     for (int i = 0; i < forecasts.length(); i++) {
-                        // 予報情報を取得
+                        // 情報を取得
                         JSONObject forecast = forecasts.getJSONObject(i);
-                        // 日付
                         if(!forecast.isNull("0")) {
                             first = forecast.getString("0");
                         }
-                        // 予報
                         if(!forecast.isNull("1")) {
                             second = forecast.getString("1");
                         }
-                        //
                         if(!forecast.isNull("2")) {
                             third = forecast.getString("2");
                         }
@@ -79,6 +77,9 @@ public class MyWidgetIntentReceiver extends BroadcastReceiver {
                         }
                         if(!forecast.isNull("6")) {
                             seventh = forecast.getString("6");
+                        }
+                        if(!forecast.isNull("7")) {
+                            eighth = forecast.getString("7");
                         }
                     }
                 } catch (JSONException e) {
@@ -107,10 +108,10 @@ public class MyWidgetIntentReceiver extends BroadcastReceiver {
             remoteViews.setTextViewText(R.id.forthtext, fifth);
             remoteViews.setTextViewText(R.id.sixthtext, sixth);
             remoteViews.setTextViewText(R.id.seventhtext, seventh);
-
+            remoteViews.setTextViewText(R.id.eighthtext, eighth);
 
             // もう一回クリックイベントを登録(毎回登録しないと上手く動かず)
-            remoteViews.setOnClickPendingIntent(R.id.button, WidgetProvider.clickButton(context));
+            remoteViews.setOnClickPendingIntent(R.id.LinearLayout, WidgetProvider.clickButton(context));
             WidgetProvider.pushWidgetUpdate(context.getApplicationContext(), remoteViews);
         }
     }
